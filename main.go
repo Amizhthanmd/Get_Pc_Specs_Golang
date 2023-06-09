@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"log"
 	"runtime"
-	_"time"
+	"time"
 
 	"github.com/shirou/gopsutil/disk"
 	"github.com/shirou/gopsutil/host"
 )
 func main() {
+	dd()
 	// Retrieve host information
 	hostInfo, err := host.Info()
 	if err !=nil{
@@ -46,7 +47,7 @@ func main() {
 }
 
 func dd(){
-
+	fmt.Println(time.ANSIC)
 }
 
 /* package main
