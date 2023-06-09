@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"log"
 	"runtime"
+	_"time"
 
 	"github.com/shirou/gopsutil/disk"
 	"github.com/shirou/gopsutil/host"
 )
-
 func main() {
 	// Retrieve host information
 	hostInfo, err := host.Info()
@@ -27,6 +27,7 @@ func main() {
 	// Retrieve disk information for "/System/Volumes/Data" mount point
 	partitions, err := disk.Partitions(false)
 	if err == nil {
+		
 		for _, partition := range partitions {
 			if partition.Mountpoint == "/System/Volumes/Data" {
 				usage, err := disk.Usage(partition.Mountpoint)
@@ -42,6 +43,10 @@ func main() {
 			}
 		}
 	}
+}
+
+func dd(){
+
 }
 
 /* package main
