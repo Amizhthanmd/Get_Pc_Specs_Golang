@@ -48,6 +48,8 @@ func main() {
 
 func dd(){
 	fmt.Println(time.ANSIC)
+	fmt.Println(time.ANSIC)
+
 }
 
 /* package main
